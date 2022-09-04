@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0*ics92mmzn4ukwec)*)t=w3b)2_035=^mjs+^@&q&4-!nla*-'
+SECRET_KEY = config('SKEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://ebukaportfolioapp.herokuapp.com/']
 
 
 # Application definition
@@ -138,8 +139,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
-DEFAULT_FROM_EMAIL = os.environ.get('FROM_EMAIL')
-EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+EMAIL_HOST_USER = config('EMAIL_USER')
+DEFAULT_FROM_EMAIL = config('FROM_EMAIL')
+EMAIL_HOST_PASSWORD=config('EMAIL_PASSWORD')
 EMAIL_TIMEOUT = 10
 EMAIL_USE_TLS = True
