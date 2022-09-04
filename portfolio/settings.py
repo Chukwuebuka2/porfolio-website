@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = config('SKEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://ebukaportfolioapp.herokuapp.com/']
 
@@ -141,7 +141,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 # EMAIL_HOST_USER = config('EMAIL_USER')
 # DEFAULT_FROM_EMAIL = config('FROM_EMAIL')
-EMAIL_HOST_PASSWORD= 'jjlfucgyltgozzde'
+EMAIL_HOST_PASSWORD= 'einstein2@'
 EMAIL_TIMEOUT = 10
 EMAIL_USE_TLS = True
 
