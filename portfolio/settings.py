@@ -29,6 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['https://ebukaportfolioapp.herokuapp.com/']
 
+SECRET_KEY = config('S_KEY')
 
 # Application definition
 
@@ -88,9 +89,9 @@ DATABASES = {
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'ebukvick',
-    'API_KEY': 993699699432962,
-    'API_SECRET': 'U4ftPDDxYoZlkSoaMryRHnIJ5wI'
+    'CLOUD_NAME': config('NAME'),
+    'API_KEY': config('API_KEY'),
+    'API_SECRET': config('API_SECRET_KEY')
 }
 
 
@@ -152,7 +153,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 # EMAIL_HOST_USER = config('EMAIL_USER')
 # DEFAULT_FROM_EMAIL = config('FROM_EMAIL')
-EMAIL_HOST_PASSWORD= 'einstein2@'
+# EMAIL_HOST_PASSWORD= config('EMAIL_PASSWORD')
 EMAIL_TIMEOUT = 10
 EMAIL_USE_TLS = True
 
