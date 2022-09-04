@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ebuka',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'ebukvick',
+    'API_KEY': 993699699432962,
+    'API_SECRET': 'U4ftPDDxYoZlkSoaMryRHnIJ5wI'
+}
+
 
 
 # Password validation
